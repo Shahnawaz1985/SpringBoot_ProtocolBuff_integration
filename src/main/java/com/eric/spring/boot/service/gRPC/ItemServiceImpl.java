@@ -25,6 +25,8 @@ public class ItemServiceImpl implements ItemService{
 	
 	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(ItemServiceImpl.class);
 	
+	@Autowired
+	private RestTemplate restTemplate;
 	
 	@Autowired
 	private ObjectMapper objectMapper;
@@ -38,7 +40,6 @@ public class ItemServiceImpl implements ItemService{
 
 	@Override
 	public List<Items> getAllItems() {
-		RestTemplate restTemplate = new RestTemplate();
 		String itemsResult = restTemplate.getForObject(ApplicationProperties.ITEMS_MONGO_REST_ENDPOINT, String.class);
 		log.info("Response received from Mongo Rest Endpoint : {} " ,itemsResult);
 		List<Items> allItems = null;
