@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Shahnawaz
  *
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.eric.spring.boot.configuration.gRPC"})
 public class SpringBootGRpcIntegrationApplication {
 
 	public static void main(String[] args) {
