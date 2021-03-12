@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "CartItem.proto"; 
+
+option java_outer_classname = "CartsProtoImpl";
+option java_multiple_files = true;
+option java_package = "com.eric.spring.boot.collections.protoc_generated";
+
+message Carts{
+	string id = 1;
+	repeated CartItem cartItems = 2;
+}

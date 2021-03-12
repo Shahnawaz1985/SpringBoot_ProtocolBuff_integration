@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_outer_classname = "ItemsProtoImpl";
+option java_multiple_files = true;
+option java_package = "com.eric.spring.boot.collections.protoc_generated";
+
+message Items {
+	string id = 1;
+    string title = 2;
+    double price = 3;
+}
+
